@@ -20,8 +20,9 @@ git clone .
 
 
 #
-# 2. create python3 virtual env
+# 2. create python3 virtual env and deps
 python3 -m venv env
+./pip3-install-requirements
 
 
 #
