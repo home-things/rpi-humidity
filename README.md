@@ -23,10 +23,13 @@ git clone .
 # 2. create python3 virtual env and deps
 python3 -m venv env
 ./pip3-install-requirements
+# original instructions:
+# 1. https://learn.adafruit.com/dht-humidity-sensing-on-raspberry-pi-with-gdocs-logging/python-setup
+# 2. https://learn.adafruit.com/circuitpython-on-raspberrypi-linux/installing-circuitpython-on-raspberry-pi
 
 
 #
-# 3. run puthon env
+# 3. run python env
 source env/bin/activate
 
 
