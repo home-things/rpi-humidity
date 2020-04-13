@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+dir=`dirname "$(readlink -f "$0")"`
+count=3
+tail -n$count $dir/log | python3 -c 'import sys; print(f"{(sum(float(l) for l in sys.stdin) / '$count'):.2f}")'

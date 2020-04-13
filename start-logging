@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+dir=`dirname "$(readlink -f "$0")"`
+. $dir/env/bin/activate
+export PYTHONUNBUFFERED=1
+
+./start-logging.py
+#2> >(while read line; do echo -e "\e[01;33m$line\e[0m" >&2; done)
