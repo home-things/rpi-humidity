@@ -3,6 +3,10 @@ import time
 import board
 import adafruit_dht
 import sys
+from datetime import datetime
+
+def now():
+    return datetime.now().isoformat()
 
 # Initial the dht device, with data pin connected to:
 dhtDevice = adafruit_dht.DHT22(board.D12)
@@ -13,7 +17,7 @@ while True:
         temperature_c = dhtDevice.temperature
         #temperature_f = temperature_c * (9 / 5) + 32
         humidity = dhtDevice.humidity
-        print(humidity)
+        print(f"{now()} {humidity}")
  
     except RuntimeError as error:
         # Errors happen fairly often, DHT's are hard to read, just keep going
