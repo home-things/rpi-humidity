@@ -3,5 +3,9 @@ dir=`dirname "$(readlink -f "$0")"`
 . $dir/env/bin/activate
 export PYTHONUNBUFFERED=1
 
-./start-logging.py >> log
+while true; do
+  (./start-logging.py >> log) || :
+  pid=`pgrep libgpiod`
+  kill -15 $pid
+done
 #2> >(while read line; do echo -e "\e[01;33m$line\e[0m" >&2; done)
