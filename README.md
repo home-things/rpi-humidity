@@ -21,6 +21,7 @@ git clone .
 
 #
 # 2. create python3 virtual env and deps
+sudo apt-get install python3-venv
 python3 -m venv env
 ./pip3-install-requirements
 # original instructions:
